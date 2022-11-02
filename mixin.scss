@@ -1,0 +1,188 @@
+//Colors
+$color: #2dcdcc;
+$wh: #fff;
+$maxContent: 1440;
+
+@mixin linc {
+  font-size: 14px;
+  line-height: 13px;
+  color: #098736;
+}
+
+@mixin name_a {
+  color: yellow;
+  padding: 10px;
+  font-size: 14px;
+}
+
+@mixin color {
+  color: #2dcdcc;
+}
+
+@mixin bg {
+  background: #ffffff;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+}
+
+@mixin bg_dark {
+  background: #333333;
+}
+
+@mixin shadow {
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.14);
+  border-radius: 10px;
+}
+
+@mixin shadow_white {
+  border: 1px solid #d84882;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+@mixin shadow_min {
+  background: #FFFFFF;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.18);
+  border-radius: 4px;
+}
+
+@mixin btn_mm {
+  display: grid;
+  place-items: center;
+  border-width: 0;
+  background: #2DCDCC;
+  border-radius: 10px;
+  width: 100%;
+  color: #ffffff;
+  cursor: pointer;
+  @include FontSize(16, 14);
+  font-family: 'Medium';
+
+  &:hover {
+    background-color: #ffffff;
+    color: #333333;
+    border: 1px solid #2DCDCC;
+    border-width: 1px;
+
+  }
+}
+
+
+@mixin btn_wh {
+  display: grid;
+  place-items: center;
+  border-width: 0;
+  background: #ffffff;
+  border-radius: 10px;
+  color: #333333;
+  border: 1px solid #2DCDCC;
+  width: 100%;
+  cursor: pointer;
+  @include FontSize(16, 14);
+  font-family: 'Medium';
+
+  &:hover {
+    background-color: #2DCDCC;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-width: 1px;
+
+  }
+}
+
+//адаптивный шрифт
+$maxWidth: 1440;
+
+@mixin FontSize($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 320;
+  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+@mixin mb($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 320;
+  margin-bottom: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+@mixin mr($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 320;
+  margin-right: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+@mixin gg($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 320;
+  grid-gap: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+
+.mb_63 {
+  margin-bottom: 63px;
+  display: block;
+}
+
+.mb_18 {
+  @include mb(18, 16);
+  display: block;
+}
+
+.mb_20 {
+  @include mb(25, 20);
+  display: block;
+}
+
+.mb_26 {
+  @include mb(26, 24);
+  display: block;
+}
+
+.mb_30 {
+  @include mb(30, 25);
+  display: block;
+}
+
+.mb_32 {
+  @include mb(32, 22);
+  display: block;
+}
+
+.mb_35 {
+  @include mb(35, 15);
+  display: block;
+}
+
+
+.mb_38 {
+  @include mb(38, 18);
+  display: block;
+}
+
+.mb_43 {
+  @include mb(43, 38);
+  display: block;
+}
+
+.mb_48 {
+  @include mb(48, 28);
+  display: block;
+}
+
+.mb_54 {
+  @include mb(54, 44);
+  display: block;
+}
+
+.mb_76 {
+  margin-bottom: 76px !important;
+  display: block;
+}
+
+.fs_22 {
+  @include FontSize(22, 14);
+}
+
+.mb_38_input {
+  margin-bottom: 38px !important;
+}
