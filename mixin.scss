@@ -15,10 +15,6 @@ $maxContent: 1440;
   font-size: 14px;
 }
 
-@mixin color {
-  color: #2dcdcc;
-}
-
 @mixin bg {
   background: #ffffff;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
